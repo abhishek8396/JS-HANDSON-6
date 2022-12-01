@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS HANDSON</title>
+</head>
+<body>
+    <h1>JS HANDSON PROBLEM SOLVING</h1>
+    <p>Check whether the year is Leap year or not.
+        Write a program which takes an year 
+        N
+         as input from the user and find out whether the given year is a Leap Year or not.</p>
+    <pre> 
+        var Check_Leap = (year) => 
+        {
+         if((year % 4 === 0) && (year % 100 !== 0)){
+           return "Leap Year";
+         }
+         else{
+           return "Non Leap Year";
+         }
+          
+        
+        };
+         
+        </pre>
+    <p>Perfect Number Check.
+        Have you heard of Perfect numbers? If not let me tell you what is it, Perfect Numbers are integers that are equal to the sum of all its divisors except that number itself.
+        
+        Now, You are given an integer 
+        N
+        , write a program to check whether the given number is a Perfect Number or not.</p>
+    <pre> 
+        var Perfect_Check = (N) => 
+        {
+          let count = 0;
+          for(let i = 1; i <= N/2; i++){
+            if(N % i === 0)
+            count += i;
+          }
+          if(count === N && count < N)
+            return "YES";
+            else{
+              return "NO";
+            }
+                
+        };
+         
+        </pre>
+    <p>Reverse a Number.
+        Write a program which takes a numebr 
+        N
+         as input from the user and You need to reverse the number.</p> 
+    <pre> 
+        var Reverse_Number = (N) => 
+        {
+          N = N + "";
+          let reverse = N.split("").reverse().join("");
+          return parseInt(reverse);
+        
+        };
+         
+        </pre>
+    <p>Substring Check.
+        You are given two strings 
+        S
+        1
+         and 
+        S
+        2
+        , you need to check whether the string S1 is a substring of string S2 or not.</p> 
+    <pre>
+        var Substring_Check = (S1, S2) => 
+        {
+          const arr = S1.split(" ");
+          for(let i = 0; i< arr.length; i++){
+            if(arr[i] === S2){
+              return "YES";
+            }
+          }
+          return "NO";
+        };
+         
+        </pre>                            
+</body>
+</html>
