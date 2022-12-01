@@ -84,6 +84,24 @@
           return "NO";
         };
          
-        </pre>                            
+        </pre>
+    <p>Find the Smaller Angle
+        PrepBuddy has an analog clock which consists of two hands one for hour and another for minute. She wants to calculate the shorter angle formed between hour and minute hand at any given time.</p> 
+    <pre>var min = (a,b)=>{
+        if(a>b) return b
+        return a;
+      }
+      
+      
+      var Minimal_Angle = (h, m) => 
+      {
+        min_angle = m*6;
+        hour_angle = h*30+(15*min_angle)/180;
+        angle = Math.abs(hour_angle-min_angle);
+        return parseInt(min(angle,360-angle))
+        
+      };
+      
+      </pre>                                   
 </body>
 </html>
